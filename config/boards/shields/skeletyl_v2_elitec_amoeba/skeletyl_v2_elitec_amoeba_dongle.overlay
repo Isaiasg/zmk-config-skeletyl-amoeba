@@ -1,0 +1,18 @@
+/*
+ * Copyright (c) 2024 ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include "skeletyl_v2_elitec_amoeba.dtsi"
+
+/ {
+    chosen {
+        zmk,kscan = &kscan0;
+    };
+};
+
+&kscan0 {
+    compatible = "zmk,kscan-gpio-direct";
+    input-gpios;
+};
