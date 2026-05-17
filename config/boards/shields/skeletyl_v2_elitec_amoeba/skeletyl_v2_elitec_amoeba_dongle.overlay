@@ -6,14 +6,19 @@
 
 #include "skeletyl_v2_elitec_amoeba.dtsi"
 
-/ {
-    chosen {
-        zmk,kscan = &kscan0;
-    };
+&kscan0 {
+    status = "disabled";
 };
 
-&kscan0 {
-    compatible = "zmk,kscan-gpio-direct";
-    /delete-property/ row-gpios;
-    input-gpios;
+/ {
+    chosen {
+        zmk,kscan = &mock_kscan;
+    };
+
+    mock_kscan: mock_kscan_0 {
+        compatible = "zmk,kscan-mock";
+        columns = <0>;
+        rows = <0>;
+        events = <0>;
+    };
 };
