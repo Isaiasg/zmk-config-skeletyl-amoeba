@@ -8,6 +8,7 @@
 
 &kscan0 {
     status = "disabled";
+    /delete-property/ row-gpios;
 };
 
 / {
